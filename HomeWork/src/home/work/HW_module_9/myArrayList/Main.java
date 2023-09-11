@@ -13,12 +13,14 @@ public class Main {
         System.out.println(name.size());
         System.out.println(name);
         name.remove(0);
-        name.remove(1);
+        //name.remove(1);
+
+
         System.out.println(name.size());
         System.out.println(name);
-        // System.out.println(name.get(0));
-        name.add("Silvia");
-        System.out.println(name.size());
-        System.out.println(name);
+         //System.out.println(name.get(0));
+//        name.add("Silvia");
+//        System.out.println(name.size());
+//        System.out.println(name);
     }
 }

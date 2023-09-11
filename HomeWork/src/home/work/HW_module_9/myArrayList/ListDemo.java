@@ -5,5 +5,5 @@ public interface ListDemo<E> {
     boolean remove(int index);
     void clear();
     int size();
-    E get(int index);
+    Object get(int index);
 }

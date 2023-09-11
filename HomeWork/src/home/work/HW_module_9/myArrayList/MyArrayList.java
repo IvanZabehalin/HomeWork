@@ -24,11 +24,15 @@ public class MyArrayList<E> implements ListDemo<E> {
 
     @Override
     public boolean remove(int index) {
+        checkIndex(index);
         for (int i = index; i < size - 1; i++) {
             elementData[i] = elementData[i + 1];
         }
+
         elementData = Arrays.copyOf(elementData, elementData.length - 1);
+        
         size--;
+
         return true;
     }
 
@@ -45,12 +49,20 @@ public class MyArrayList<E> implements ListDemo<E> {
     }
 
     @Override
-    public E get(int index) {
-        return (E) elementData[index];
+    public Object get(int index) {
+        checkIndex(index);
+        return  elementData[index];
     }
 
     @Override
     public String toString() {
         return Arrays.toString(elementData);
+    }
+
+    private int checkIndex(int index) {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException();
+        }
+        return index;
     }
 }
