@@ -30,7 +30,7 @@ public class MyArrayList<E> implements ListDemo<E> {
         }
 
         elementData = Arrays.copyOf(elementData, elementData.length - 1);
-        
+
         size--;
 
         return true;
@@ -51,7 +51,7 @@ public class MyArrayList<E> implements ListDemo<E> {
     @Override
     public Object get(int index) {
         checkIndex(index);
-        return  elementData[index];
+        return elementData[index];
     }
 
     @Override
